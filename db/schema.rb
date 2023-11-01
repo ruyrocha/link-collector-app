@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_01_192910) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_01_193949) do
+  create_table "page_links", force: :cascade do |t|
+    t.integer "page_id", null: false
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["page_id"], name: "index_page_links_on_page_id"
+  end
+
   create_table "pages", force: :cascade do |t|
     t.string "title"
     t.string "url"
@@ -30,4 +39,5 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_01_192910) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "page_links", "pages"
 end
