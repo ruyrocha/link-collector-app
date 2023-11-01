@@ -121,6 +121,9 @@ GEM
     ffaker (2.23.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    http-2-next (1.0.1)
+    httpx (1.1.0)
+      http-2-next (>= 1.0.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.3)
@@ -293,6 +296,7 @@ DEPENDENCIES
   devise (~> 4.9)
   factory_bot_rails
   ffaker
+  httpx (~> 1.1)
   importmap-rails
   jbuilder
   puma (>= 5.0)
