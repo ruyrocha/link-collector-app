@@ -16,6 +16,17 @@ RSpec.describe PageFetcherService do
 
       document = described_class.call(url:)
 
+      expect(document).not_to be_nil
+      expect(document.title).to eq page_title
+    end
+
+    it 'returns the parsed HTML document for the given URL when there are redirects' do
+      url = 'https://koombea.com/'
+      page_title = 'Koombea - Your App Development Partner'
+
+      document = described_class.call(url:)
+
+      expect(document).not_to be_nil
       expect(document.title).to eq page_title
     end
   end

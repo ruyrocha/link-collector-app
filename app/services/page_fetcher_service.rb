@@ -20,7 +20,8 @@ class PageFetcherService
   end
 
   def call
-    content = HTTPX.get(url)&.to_s
+    http = HTTPX.plugin(:follow_redirects)
+    content = http.max_redirects(16).get(url)&.to_s
 
     Nokogiri::HTML.parse(content)
   end
