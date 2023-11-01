@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_01_193949) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_01_195712) do
   create_table "page_links", force: :cascade do |t|
     t.integer "page_id", null: false
     t.string "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_01_193949) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "page_links_count"
   end
 
   create_table "users", force: :cascade do |t|
