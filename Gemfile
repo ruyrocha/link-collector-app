@@ -78,3 +78,5 @@ gem 'devise', '~> 4.9'
 gem 'httpx', '~> 1.1'
 
 gem 'sidekiq', '~> 7.2'
+
+gem "pagy", "~> 6.1"

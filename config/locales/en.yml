@@ -32,3 +32,5 @@ en:
   page:
     title: Name
     total_links: Total Links
+  page_link:
+    url: URL

@@ -1,16 +1,11 @@
 <div id="<%= dom_id page_link %>">
   <p>
-    <strong>Page:</strong>
-    <%= page_link.page_id %>
-  </p>
-
-  <p>
-    <strong>Title:</strong>
+    <strong><%= t(:title, scope: :page) %></strong>
     <%= page_link.title %>
   </p>
 
   <p>
-    <strong>Url:</strong>
+    <strong><%= t(:url, scope: :page_link) %></strong>
     <%= page_link.url %>
   </p>
 
