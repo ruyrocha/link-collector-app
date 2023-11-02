@@ -76,3 +76,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "httpx", "~> 1.1"
+
+gem "sidekiq", "~> 7.2"
