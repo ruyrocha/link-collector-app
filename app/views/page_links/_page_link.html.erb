@@ -1,12 +1,7 @@
-<div id="<%= dom_id page_link %>">
-  <p>
-    <strong><%= t(:title, scope: :page) %></strong>
-    <%= page_link.title %>
-  </p>
-
-  <p>
-    <strong><%= t(:url, scope: :page_link) %></strong>
+<tr class="border-b dark:border-neutral-500" id="<%= dom_id page_link %>">
+  <td class="whitespace-nowrap px-6 py-4 font-medium"><%= page_link.title %></td>
+  <td class="whitespace-nowrap px-6 py-4">
     <%= page_link.url %>
-  </p>
+  </td>
+</tr>
 
-</div>

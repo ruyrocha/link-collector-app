@@ -1,16 +1,33 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Pages</h1>
+<div class="flex justify-between items-center mb-12">
+  <h1 class="text-2xl font-bold font-mono">Pages</h1>
 
-<div id="pages">
-  <% @pages.each do |page| %>
-    <%= render page %>
-    <p>
-      <%= link_to "Show this page", page %>
-    </p>
-  <% end %>
+  <%= link_to "Scrape new URL", new_page_path, class: "px-6 py-3 bg-white text-black rounded shadow border border-black" %>
 </div>
 
-<%= link_to "New page", new_page_path %>
+<div class="flex flex-col" id="pages">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full text-left text-sm font-light">
+          <thead class="border-b font-medium dark:border-neutral-500">
+            <tr>
+              <th scope="col" class="px-6 py-4">Name</th>
+              <th scope="col" class="px-6 py-4">Total Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @pages.each do |page| %>
+              <%= render page %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+<nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+  <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+</nav>

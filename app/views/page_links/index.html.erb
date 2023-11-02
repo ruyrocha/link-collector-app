@@ -2,13 +2,27 @@
 
 <h1>Page links</h1>
 
-<div id="page_links">
-  <% @page_links.each do |page_link| %>
-    <%= render page_link %>
-    <p>
-      <%= link_to "Show this page link", page_link %>
-    </p>
-  <% end %>
+<div class="flex flex-col" id="page_links">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table class="min-w-full text-left text-sm font-light">
+          <thead class="border-b font-medium dark:border-neutral-500">
+            <tr>
+              <th scope="col" class="px-6 py-4">Name</th>
+              <th scope="col" class="px-6 py-4">URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @page_links.each do |page_link| %>
+              <%= render page_link %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
+
 
 <%= link_to "New page link", new_page_link_path %>

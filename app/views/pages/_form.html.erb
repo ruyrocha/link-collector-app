@@ -12,16 +12,11 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :url, style: "display: block", class: 'block text-sm font-medium leading-6 text-gray-900' %>
+    <%= form.text_field :url, class: 'block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6' %>
   </div>
 
   <div>
-    <%= form.label :url, style: "display: block" %>
-    <%= form.text_field :url %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit(class: "px-6 py-3 bg-white text-black rounded shadow border border-black") %>
   </div>
 <% end %>
