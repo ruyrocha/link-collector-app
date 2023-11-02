@@ -4,6 +4,7 @@ class Page < ApplicationRecord
   has_many :page_links
 
   before_create :set_title
+  after_create :enqueue_links_fetcher_job
 
   private
 
@@ -13,5 +14,9 @@ class Page < ApplicationRecord
     document = PageFetcherService.call(url:)
 
     self.title = document.title
+  end
+
+  def enqueue_links_fetcher_job
+    LinksFetcherJob.perform_async(id)
   end
 end
