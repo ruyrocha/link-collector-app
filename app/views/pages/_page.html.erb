@@ -1,12 +1,11 @@
 <div id="<%= dom_id page %>">
   <p>
-    <strong>Title:</strong>
+    <strong><%= t(:title, scope: :page) %></strong>
     <%= page.title %>
   </p>
 
   <p>
-    <strong>Url:</strong>
-    <%= page.url %>
+    <strong><%= t(:total_links, scope: :page) %></strong>
+    <%= page.page_links.count %>
   </p>
-
 </div>

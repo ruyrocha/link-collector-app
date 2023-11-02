@@ -29,3 +29,6 @@
 
 en:
   hello: "Hello world"
+  page:
+    title: Name
+    total_links: Total Links
