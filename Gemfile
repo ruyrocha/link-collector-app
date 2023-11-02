@@ -73,8 +73,8 @@ group :test do
   gem 'shoulda-matchers', '~> 5.0'
 end
 
-gem "devise", "~> 4.9"
+gem 'devise', '~> 4.9'
 
-gem "httpx", "~> 1.1"
+gem 'httpx', '~> 1.1'
 
-gem "sidekiq", "~> 7.2"
+gem 'sidekiq', '~> 7.2'
